@@ -1,0 +1,10 @@
+
+
+{% block content %}
+  <h2>Artist Signup</h2>
+  <form method="post" action="{% url 'artist_signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+
+
+{% block content %}
+  <h2>Viewer Login</h2>
+  <form method="post" action="{% url 'viewer_login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Log In</button>
+  </form>
+{% endblock %}

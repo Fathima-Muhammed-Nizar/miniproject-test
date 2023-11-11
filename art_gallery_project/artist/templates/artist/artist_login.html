@@ -1,0 +1,15 @@
+<h1>Artist LogIn</h1>
+{% block head %}
+    <title>Artist LogIn</title>
+{% endblock head %}
+
+{% block content %}
+    <h1>Artist LogIn</h1>
+   
+    <form method="post">
+
+        {% csrf_token %}
+        {{form.as_p}}
+    <input type="submit" value="LogIn">
+    </form>
+{% endblock content %}

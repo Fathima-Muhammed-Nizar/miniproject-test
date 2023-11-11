@@ -1,0 +1,21 @@
+
+
+<!-- viewer/templates/viewer/viewer_home.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Viewer Home</h2>
+
+  {% if artworks %}
+    <ul>
+      {% for artwork in artworks %}
+        <li>{{ artwork.title }} by {{ artwork.artist.user.username }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No artworks available.</p>
+  {% endif %}
+
+{% endblock %}
+
